@@ -1,0 +1,337 @@
+html {
+    scroll-behavior: smooth;
+}
+.zoom{
+    border-radius: 10px;
+    transition: 0.5 ease;
+}
+.zoom:hover{
+    transform: scale(3);
+    box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.5);
+}
+img{
+    transition: transform 0.3s ease;
+}
+img:hover{
+    transform: scale(1.03);
+}
+.no-zoom:hover{
+    transform: none;
+}
+#mobList h4 {
+    left: 764px;
+    z-index: 1; 
+}
+#mobList{
+    z-index: 1; 
+}
+.sombra{
+    box-shadow: 10px 10px 35px black;
+    border-radius: 10px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+.sidebar {
+    width: 220px;
+    background-image: url(img/spruce_planks_04.png);
+    background-size: contain;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 28px 20px;
+    margin: 10px 0;
+    width: 82%;
+    text-align: center;
+    background-image: url(img/botao.png);
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    background-color: #555;
+}
+.content th{
+    background-color: rgba(0, 255, 8, 0.6);
+}
+.content thead,table,tr,td,td{
+    width: 1200px;
+    position: relative;
+    z-index: 1;
+}
+.content{
+    margin-left: 220px;
+    top: 120px;
+    padding: 300px;
+    width: 46%;
+    height: 175px; /* Página bem longa */
+    
+    /* Camadas do terreno */
+    background-image:
+        url(Back/10.png);
+    /* Ajusta a posição individualmente para cada imagem */
+    background-position:
+        0px -528px;
+    /* Ajusta o tamanho automaticamente para todas */
+    background-size: 1303px 1303px;
+    
+    /* Impede a repetição */
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.content1 {
+    margin-left: 220px;
+    top: 120px;
+    padding: 300px;
+    width: 46%;
+    height: 6300px; /* Página bem longa */
+    
+    /* Camadas do terreno */
+    background-image:
+        url(Back/1.png),
+        url(Back/2.png),
+        url(Back/3.png),
+        url(Back/4.png),
+        url(Back/5.png),
+        url(Back/6.png),
+        url(Back/7.png),
+        url(Back/8.png),
+        url(Back/9.png),
+        url(Back/10.png),
+        url(Back/11.png),
+        url(Back/12.png);
+
+    /* Ajusta a posição individualmente para cada imagem */
+    background-position:
+        0px 0px,
+        0px 1303px,
+        0px 2606px,
+        0px 3909px,
+        0px 5212px,
+        0px 6515px;
+    
+    /* Ajusta o tamanho automaticamente para todas */
+    background-size: 1303px 1303px;
+    
+    /* Impede a repetição */
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.content1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 220px;
+    width:85.5%;
+    height: 6900px;
+    background-color: rgba(0, 0, 0, 0.6); /* Escurece a div (0.5 = 50% de opacidade) */
+}
+.content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 220px;
+    width: 85.5%;
+    height: 777px;
+    background-color: rgba(0, 0, 0, 0.6); /* Escurece a div (0.5 = 50% de opacidade) */
+}
+.content form {
+    position: relative;
+    z-index: 1; /* Coloca o formulário acima da camada escura */
+    padding: 20px;
+    border-radius: 10px;
+}
+.content h1,p{
+    position: relative;
+    z-index: 1; 
+    color: white;
+}
+.content1 p{
+    font-size: 25px;
+}
+.topo{
+    position: absolute;
+    top: 190px;
+    font-size: 60px;
+    font-family: monospace;
+    z-index: 1; /* Coloca o formulário acima da camada escura */
+    color: white;
+}
+p{
+    position: absolute;
+    z-index: 1; /* Coloca o formulário acima da camada escura */
+    color: white;
+}
+/* Estilo para formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input, form button, form select{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+form select{
+    width: 320px;
+}
+form input {
+    width: 300px;
+}
+form button {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+form button:hover {
+    background-color: #555;
+}
+.mob-card {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+}
+/* Listar-HTML */
+.mob-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.mob-container div, .mob-container p{
+    height: 120px;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/*Local das Imagens do Mobs*/
+.enderman{
+    position: absolute;
+    top: 7000px;  /* Distância do topo */
+    left: 1019px; /* Distância da esquerda */
+    width: 500px; /* Largura */
+    height: auto; /* Altura automática */
+}
+.enderman:hover{
+    transform: none;
+}
+.creeper{
+    position: absolute;
+    top: 7450px;  /* Distância do topo */
+    left: 250px; /* Distância da esquerda */
+    width: 200px; /* Largura */
+    height: auto; /* Altura automática */
+}
+.creeper:hover{
+    transform: none;
+}
+.porco{
+    position: absolute;
+    top: 350px;  /* Distância do topo */
+    left: 380px; /* Distância da esquerda */
+    width: 200px; /* Largura */
+    height: auto; /* Altura automática */
+}
+.titulo{
+    position: absolute;
+    top: 300px;  /* Distância do topo */
+    left: 385px; /* Distância da esquerda */
+    width: 1000px; /* Largura */
+    height: auto; /* Altura automática */
+}
+.titulo:hover{
+    
+    transform: none;
+}
+.titulo2{
+    position: absolute;
+    top: 540px;  /* Distância do topo */
+    left: 750px; /* Distância da esquerda */
+    width: 200px; /* Largura */
+    height: auto; /* Altura automática */
+    z-index: 1;
+}
+h2{
+    z-index: 1;
+    font-size: 40px;
+    position: absolute;
+}
+.div{
+    height: 200px;
+    width: 540px;
+    background-color: rgba(60, 60, 60, 0.9);
+    position: relative;
+    border-radius: 10px;
+    font-size: 25px;
+}
+.div p{
+    top: 25px;
+    position: absolute;
+}
+h4{
+    color: white;
+    z-index: 1;
+}
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* O vídeo ocupa toda a tela */
+#preloader video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Esconde o conteúdo inicialmente */
+#conteudo {
+    display: none;
+}

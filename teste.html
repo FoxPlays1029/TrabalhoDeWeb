@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play Música ao Clicar</title>
+  </head>
+  <body>
+    <div id="preloader">
+      <video id="transitionVideo" autoplay muted>
+        <source src="gif/CARREGANDO....mp4" type="video/mp4" />
+        Seu navegador não suporta vídeos.
+      </video>
+    </div>
+    <!-- Imagem que inicia ou pausa a música -->
+    <img
+      src="botao-play.png"
+      alt="Tocar Música"
+      style="cursor: pointer; width: 100px"
+      onclick="toggleMusica()"
+    />
+
+    <!-- Elemento de áudio -->
+    <audio id="musica" loop>
+      <source src="music/Pigstep (Stereo Mix).mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+      let tocando = false; // Controle da música
+      const audio = document.getElementById("musica");
+
+      function toggleMusica() {
+        if (tocando) {
+          audio.pause();
+        } else {
+          audio.play();
+        }
+        tocando = !tocando; // Alterna estado
+      }
+    </script>
+  </body>
+</html>
