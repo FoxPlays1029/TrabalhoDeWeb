@@ -6,7 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobList = document.getElementById("mobList");
     const img = document.getElementById("minhaImagem");
     const img2 = document.getElementById("minhaImagem2");
+
+    // Adiciona eventos aos formulários e imagens
+    if (mobForm) mobForm.addEventListener("submit", cadastrarMob);
+    if (mobListDiv) listarMobsDiv();
+    if (deleteForm) deleteForm.addEventListener("submit", excluirMob);
+    if (mobList) listarMobs();
+    if (img) configurarTrocaImagem(img, "img/enderman2.webp", "img/enderman.webp");
+    if (img2) configurarTrocaImagem(img2, "img/creeper2.png", "img/creeper.png");
 });
+
+// Função para trocar imagem ao passar o mouse
+function configurarTrocaImagem(elemento, srcEnter, srcLeave) {
+    elemento.addEventListener("mouseenter", () => elemento.src = srcEnter);
+    elemento.addEventListener("mouseleave", () => elemento.src = srcLeave);
+}
 
 // Funções para manipular armazenamento local
 function obterMobs() {
